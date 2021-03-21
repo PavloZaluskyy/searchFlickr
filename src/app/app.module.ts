@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -62,10 +62,10 @@ const appRoutes: Routes = [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '173822941720-828kkkdchs9f17q5e57istfu9lrij0l2.apps.googleusercontent.com'
-            ),
+              '160629726895-c6r717pirnce5v0cckrtpbhcqdsps9al.apps.googleusercontent.com'
+            )
           }
-        ],
+        ]
       } as SocialAuthServiceConfig,
     }
   ],

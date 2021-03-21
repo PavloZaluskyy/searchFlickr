@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialAuthService } from 'angularx-social-login';
+import { UserService } from '../../shared/service/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  user;
+  constructor(
+    private authService: SocialAuthService, 
+    private userService: UserService
+  ) { }
+  signOut(){
+    this.authService.signOut();
+    this.userService.user.name = 'User';
+    this.userService.user.photoUrl = 'assets/img/myAvatar.png';
+  }
 
   ngOnInit(): void {
+    this.user = this.userService;
+    console.log(this.user);
+    
   }
 
 }
