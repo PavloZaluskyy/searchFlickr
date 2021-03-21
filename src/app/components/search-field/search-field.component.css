@@ -1,0 +1,8 @@
+nav{
+   background-color: #fff;
+   color: #000;
+
+}
+input{   border: 1px solid #000; }
+input.ng-touched.ng-invalid {border: 1px solid red }
+input.ng-touched.ng-valid { border: 1px solid #000;}

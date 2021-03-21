@@ -1,0 +1,7 @@
+<div class="leftPanel">
+    <ul>
+        <li  *ngFor="let navItem of navObj" [routerLink]="navItem.url" [title]="navItem.title">
+            <i [class]="navItem.iconClass" [aria-hidden]="navItem.ariaHiden" ></i>
+        </li>
+    </ul>
+</div>

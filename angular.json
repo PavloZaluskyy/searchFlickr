@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ElinextTest"
+    }
+  },
+  "defaultProject": "ElinextTest",
+  "cli": {
+    "analytics": "7a6503c7-fbcf-4a8f-bda4-4800cc52ca49"
+  }
 }

@@ -1,0 +1,20 @@
+<div class="center" *ngIf="!isLoader">
+    <app-loader></app-loader>
+</div>
+<div class="row mainContent" *ngIf="isLoader">
+    <div class="center" *ngIf="isEmpty">
+        <h3>Sorry, your bookmarks are empty</h3>
+    </div>
+    <div  class="content" *ngIf="!isEmpty">
+        <app-image-item 
+            class="col s2 m4" 
+            *ngFor="let image of yourBookmarks"
+            [image]="image"
+            [isBookmarks]="image.bookmark"
+            [hideFieldTags]="true" 
+        >       
+        </app-image-item>
+    </div>
+</div>
+
+    

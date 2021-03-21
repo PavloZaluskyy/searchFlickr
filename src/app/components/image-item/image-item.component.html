@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-image">
+      <img [src]="image.url">
+    </div>
+    <div class="card-action">
+      <a class="waves-effect btn" *ngIf="!isBookmarks" (click)="handleBookmarks()">Bookmark it!</a>
+      <a class="waves-effect btn remove" *ngIf="isBookmarks" (click)="handleBookmarks()">Remove it!</a>
+      <input type="text" [(ngModel)]="tag" (keyup.enter)="addTag()" *ngIf="!hideFieldTags" placeholder="Some tags?" >
+    </div>
+</div>
