@@ -17,6 +17,9 @@ export class HeaderComponent implements OnInit {
     this.authService.signOut();
     this.userService.user.name = 'User';
     this.userService.user.photoUrl = 'assets/img/myAvatar.png';
+    this.user.id = '';
+    console.log(this.userService.user);
+    
   }
 
   ngOnInit(): void {

@@ -3,7 +3,11 @@
         <div class="wrapper">
             <h1>Image Finder</h1>
             <div class="rightBlock">
-                <i routerLink="sign-in" class="fa fa-user-circle" aria-hidden="true"></i>
+                <i routerLink="sign-in" *ngIf="user.user.name === 'User'" class="fa fa-user-circle" aria-hidden="true"></i>
+                <span class="userName" *ngIf="user.user.name !== 'User'">{{user.user.name}}</span>
+                <img class="userAvatar" *ngIf="user.user.name !== 'User'" [src]="user.user.photoUrl"/>
+                <span class="signOut" (click)="signOut()" *ngIf="user.user.name !== 'User'">Sing out</span>
+                
             </div>
         </div>
     </div>

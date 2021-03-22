@@ -1,0 +1,28 @@
+.social-panel{
+    width: 100%;
+    height: auto;
+    margin: 35px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.social-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #8D8D8D;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.gmail {
+    color: red;
+    border: 1px solid red;
+}
+
+.gmail:hover {
+    background-color: red;
+    color: #fff;
+    border: 1px solid #fff;
+}
