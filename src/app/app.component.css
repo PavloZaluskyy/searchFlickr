@@ -2,13 +2,20 @@ app-left-side{
     padding: 0!important;
     height: 100%;
 }
-.row{
+.mainContent{
     height: 80vh;
     margin-bottom: 0;
 }
+
 .rightBlock{
     height: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
     
+}
+
+@media(max-width: 600px){
+    app-left-side{
+        height: auto;
+    }
 }
