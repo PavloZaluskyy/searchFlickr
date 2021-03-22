@@ -16,14 +16,14 @@ export class ImageListComponent implements OnInit {
   
   constructor( private searchService: SearchService ) { }
 
-  onChangedPage(increased:any){
+  onChangedPage( increased:any ): void {
     this.currPage = increased;
     this.sentSerch(this.keyword)
   }
 
 
 
-  sentSerch(increased:any){
+  sentSerch( increased:any ): void {
     this.keyword = increased;
     this.searchService.serch(increased, this.currPage)
       .toPromise()

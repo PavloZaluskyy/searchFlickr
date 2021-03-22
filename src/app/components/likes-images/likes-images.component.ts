@@ -17,15 +17,12 @@ export class LikesImagesComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout( () => {
-      this.yourBookmarks = this.bookmarkService.getImage()
+      this.yourBookmarks = this.bookmarkService.getImage();
       this.isLoader = true;   
-      if(this.yourBookmarks[0]['url']) {
-        console.log( this.yourBookmarks);
+      if( this.yourBookmarks[0]['url'] ) {
         this.isEmpty = false;
       } 
     }, 500);
-    
-    
   }
 
 }

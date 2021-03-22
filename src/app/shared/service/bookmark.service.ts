@@ -8,14 +8,14 @@ export class BookmarkService {
 
   private yourBookmark: Image[] = [];
 
-  setImage(image: Image) {
+  setImage(image: Image): void {
     if(!this.yourBookmark.includes(image)){
       this.yourBookmark.push(image);
     }
     localStorage.setItem('yourBookmark', JSON.stringify(this.yourBookmark));
   }
 
-  getImage() {
+  getImage():Image[] | []  {
     if (localStorage.getItem('yourBookmark')){
       this.yourBookmark =  JSON.parse(localStorage.getItem('yourBookmark'));
       return this.yourBookmark;
@@ -23,10 +23,9 @@ export class BookmarkService {
     return [];
   }
 
-  removeImage(image: Image) {
+  removeImage(image: Image): void {
     this.yourBookmark = this.yourBookmark.filter(elem => elem.title !== image.title || elem.url !== image.url);
     localStorage.setItem('yourBookmark', JSON.stringify(this.yourBookmark));
-    console.log(this.yourBookmark);
   }
 
   constructor() { }

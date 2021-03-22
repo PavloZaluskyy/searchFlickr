@@ -8,24 +8,23 @@ import { UserService } from '../../shared/service/user.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  user;
+
+  user: any;
+
   constructor(
-    private authService: SocialAuthService, 
+    private authService: SocialAuthService,
     private userService: UserService
   ) { }
-  signOut(){
+
+  signOut(): void {
     this.authService.signOut();
     this.userService.user.name = 'User';
     this.userService.user.photoUrl = 'assets/img/myAvatar.png';
     this.user.id = '';
-    console.log(this.userService.user);
-    
   }
 
   ngOnInit(): void {
     this.user = this.userService;
-    console.log(this.user);
-    
   }
 
 }

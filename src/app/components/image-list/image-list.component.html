@@ -6,17 +6,15 @@
     <div class="center" *ngIf="!isLoader">
         <app-loader></app-loader>
     </div>
-    
     <div class="content" *ngIf="isLoader">
-        
         <app-image-item 
             class="col s12 m6 l4" 
             *ngFor="let image of images"
             [image]="image"
-            >
-            
+            > 
         </app-image-item>
     </div>
-    
 </div>
-<div class="row" class="center" *ngIf="!images[0]"><h4>No images here. Would you try to search for anything else?</h4></div>
+<div class="row" class="center" *ngIf="!images[0]">
+    <h4>No images here. Would you try to search for anything else?</h4>
+</div>

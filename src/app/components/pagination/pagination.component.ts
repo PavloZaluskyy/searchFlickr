@@ -10,13 +10,13 @@ export class PaginationComponent implements OnInit {
 
   @Output() onChangedPage = new EventEmitter<number>();
   
-  currPage:number = 1;
-  maxPages:number = 0;
-  maxShowPages = [];
-  nextDisabled = false;
-  previousDisabled = true;
-  constructor( private searchService: SearchService ) { }
+  currPage: number = 1;
+  maxPages: number = 0;
+  maxShowPages: number[] = [];
+  nextDisabled: boolean = false;
+  previousDisabled: boolean = true;
 
+  constructor( private searchService: SearchService ) { }
 
   nextPage(): void {
     if(this.currPage !== this.maxPages){
@@ -27,13 +27,12 @@ export class PaginationComponent implements OnInit {
       if(this.currPage >= 4){
         this.createArrShowPage();
       }
-      
     }else {
       this.nextDisabled = true;
     }
   }
 
-  choosePage(numberPage){
+  choosePage(numberPage): void {
     this.currPage = numberPage;
     this.onChangedPage.emit(this.currPage);
     if(this.currPage > 3){
@@ -41,7 +40,7 @@ export class PaginationComponent implements OnInit {
     }
   }
 
-  previousPage(): void{
+  previousPage(): void {
     if(this.currPage  !== 1){
       this.previousDisabled = false;
       this.nextDisabled = false;
@@ -51,25 +50,23 @@ export class PaginationComponent implements OnInit {
         this.createArrShowPage();
       }
     }else{
-      console.log(true);
-      
       this.previousDisabled = true;
     } 
   }
 
-  createArrShowPage(){
+  createArrShowPage(): void {
     this.maxShowPages = [];
     let maxSteps = 7;
     if(this.maxPages < maxSteps){
       if(this.currPage === 1){
         for(let i = 1; i <= this.maxPages; i++){
-          this.maxShowPages.push(i)
+          this.maxShowPages.push(i);
         }
       } 
     }else{
       if(this.currPage === 1){
         for(let i = 1; i <= maxSteps; i++){
-          this.maxShowPages.push(i)
+          this.maxShowPages.push(i);
         }
       } 
       if(this.currPage > 1 && this.currPage < this.maxPages - 3){
@@ -81,7 +78,6 @@ export class PaginationComponent implements OnInit {
         }
       }
     }
-    
   }
 
   ngOnInit(): void {

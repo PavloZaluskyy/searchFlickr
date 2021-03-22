@@ -25,14 +25,11 @@ export class SignInComponent implements OnInit {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
-      this.userService.user = this.user;
-      console.log(this.user);
-      
+      this.userService.user = this.user; 
     });
   }
-  signInWithGoogle(){
+  signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-    console.log(this.user);
     this.router.navigate(['']);
   }
 

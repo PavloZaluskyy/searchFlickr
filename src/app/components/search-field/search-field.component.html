@@ -1,11 +1,9 @@
 <nav>
     <div class="nav-wrapper">
-      
         <div class="input-field">
           <input id="search" (keyup.enter)="search()" [(ngModel)]="keyword" type="search" #name="ngModel" required placeholder="Find images" required>
           <label class="label-icon" (click)="search()" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons" (click)="close()">close</i>
         </div>
-      
     </div>
 </nav>

@@ -5,9 +5,11 @@ import {User} from '../interface/user';
   providedIn: 'root'
 })
 export class UserService {
+
   user: User = {
     name: 'User',
     photoUrl: ''
   };
+  
   constructor() { }
 }

@@ -32,6 +32,7 @@ ul {
     color: #2d4848;
     cursor: pointer;
 }
+
 .item span {
     background: #ffffff;
     box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
@@ -40,10 +41,12 @@ ul {
     font-size: 3rem;
     transition: all 0.3s ease;
 }
+
 .item:hover span {
     transform: scale(1.2);
     color: #23adad;
 }
+
 .item p {
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -59,6 +62,7 @@ ul {
     background: #ffffff;
     box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
 }
+
 .page__numbers, .page__btn, .page__dots {
     display: flex;
     justify-content: center;
@@ -67,38 +71,35 @@ ul {
     font-size: 1.4rem;
     cursor: pointer;
 }
+
 .page__dots {
     width: 2.6rem;
     height: 2.6rem;
     color: #23adade1;
     cursor: initial;
 }
+
 .page__numbers {
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 0.4rem;
 }
-.page__numbers:hover {
-    color: #23adad;
-}
+
+.page__numbers:hover { color: #23adad; }
+
 .page__numbers.active {
     color: #ffffff;
     background: #23adad;
     font-weight: 600;
     border: 1px solid #23adad;
 }
-.page__btn {
-    color: #23adade1;
-    /* pointer-events: none; */
-}
-.page__btn.active {
-    color: #2d4848;
-    /* pointer-events: initial; */
-}
-.page__btn.active:hover {
-    color: #23adad;
-}
-li{cursor: pointer;}
-.disabled{
-    color: #B39F99;
-}
+
+.page__btn { color: #23adade1; }
+
+.page__btn.active { color: #2d4848; }
+
+.page__btn.active:hover { color: #23adad; }
+
+li { cursor: pointer; }
+
+.disabled { color: #B39F99; }

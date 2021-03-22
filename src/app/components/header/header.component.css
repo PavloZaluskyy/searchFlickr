@@ -1,47 +1,56 @@
-header{
+header {
     width: 100%;
     background-color: #DDDDDD;
-    padding: 25px 0;
-    
+    padding: 25px 0; 
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-h1{ margin: 0; font-size: 3.5rem;}
-.rightBlock{
+
+h1 { 
+    margin: 0; 
+    font-size: 3.5rem;
+}
+
+.rightBlock {
     font-size: 2.5rem; 
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;  
 }
-.rightBlock i{
+
+.rightBlock i {
     cursor: pointer;
 }
 
-.userName{
+.userName {
     font-size: 1.9rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     margin: 0 10px;
 }
-.userAvatar{
+
+.userAvatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     margin: 0 10px;
 }
-.signOut{
+
+.signOut {
     font-size: 1.9rem;
     margin: 0 15px;
     border: 1px solid #1f1d1d;
     border-radius: 15px;
     padding: 5px 15px;
 }
-.signOut:hover{
+
+.signOut:hover {
     background-color: #3C4252;
     color: #fff;
 }

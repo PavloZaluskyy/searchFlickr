@@ -1,14 +1,16 @@
-.leftPanel{
+.leftPanel {
     height: 100%;
     border: 2px solid #000;  
 }
-ul{
+
+ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-li{
+
+li {
     font-size: 2.5em;
     margin-top: 30px;
     cursor: pointer;
@@ -19,11 +21,13 @@ li i:hover {
     padding: .5rem .5rem;
 }
 
-@media(max-width: 600px){
-    .leftPanel{margin-top: 20px;}
-    ul{
+@media(max-width: 600px) {
+
+    .leftPanel { margin-top: 20px; }
+
+    ul {
         flex-direction: row; 
         justify-content:  space-around;
     }
-    li{ margin: 15px 0;}
+    li { margin: 15px 0; }
 }

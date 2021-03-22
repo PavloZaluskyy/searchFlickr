@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftSideComponent implements OnInit {
   
-  navObj = [
+  navObj: Object[] = [
     {
       id: 1,
       iconClass: 'fa fa-cloud',

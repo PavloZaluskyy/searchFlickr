@@ -20,9 +20,9 @@ export class SearchFieldComponent implements OnInit {
     this.keyword = '';
   }
 
-  search() {
+  search(): void {
     if (this.keyword.trim()) {
-      this.sentSerch.emit(this.keyword.toLowerCase())
+      this.sentSerch.emit(this.keyword.toLowerCase());
     }
   }
 
