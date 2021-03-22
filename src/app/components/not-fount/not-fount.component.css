@@ -1,0 +1,12 @@
+.container{
+    min-width: 96%;
+    margin: 0 2%;
+    font-size: 23px;
+    text-align: center;
+    margin: 0 10px;
+    word-break: break-all;
+    color: #000;
+}
+h2{
+    margin-bottom: 2.3733333333rem;
+}
